@@ -1,51 +1,44 @@
-# Ejemplo Documentación 
-![Tinkercad](./img/ArduinoTinkercad.jpg)
+# Parcial Domiciliario Sistemas de Procesamiento de Datos 
 
 
 ## Integrantes 
-- Esteban M. Quiroz
-- Dario Cuda 
+- Fabricio de Sa Torres
 
 
-## Proyecto: Contador binario.
-![Tinkercad](./img/ContadorBinario.png)
+## Proyecto: Parte 1: Contador de 0 a 99 con Display 7 Segmentos y Multiplexación
+![image](https://github.com/FABRIDESA/Tinkercad/assets/76821540/691caa3f-3054-4312-ab5b-a50e64114a61)
 
 
-## Descripción
-En este parrafo deberan describir que funcion cumple su proyecto. Que solucion esta ofreciendo.
+## Consigna
+Diseñar un contador de 0 a 99 utilizando dos displays de 7 segmentos y tres botones para
+controlar la cuenta. Debes implementar la técnica de multiplexación para mostrar los dígitos
+en los displays. El contador debe comenzar en 0 y debe ser capaz de aumentar o disminuir
+su valor en una unidad con los botones.
+
 
 ## Función principal
-Esta funcion se encarga de encender y apagar los leds.
+void loop():
 
-B0, B1, B2, B3 son #define que utilizamos para agregar los leds, asociandolo a pines de la placa arduino.
+Llama a la función keypressed() para dar funcionalidad a los botones y lograr manipular los números mostrados en los display (poder subir de a un número o bajar, o resetear a 0).
 
-(Breve explicación de la función)
+También llama a la función printCount(countDigit) para ejecutar el encendido y apagado de los displays UNIDAD y DECENA y mostrar en ellos las decenas y unidades correspondientes.
 
-~~~ C (lenguaje en el que esta escrito)
-void EncenderBinario(int estado3, int estado2,int estado1,int estado0)
-{
-  digitalWrite(B3,estado3);
-  digitalWrite(B2,estado2);
-  digitalWrite(B1,estado1);
-  digitalWrite(B0,estado0);
-}
-~~~
+MULTIPLEXACIÓN: Llamando a esta última función, se logra la multiplexación de los display: 
+
+Encender un único display, mostrar el número y luego apagarlo, para encender el display que le sigue. Encender y apagar el display a gran velocidad logra engañar el ojo humano,
+
+que lo ve como si todo sucediera en simultáneo.
+
+![image](https://github.com/FABRIDESA/Tinkercad/assets/76821540/817e2561-f759-41d0-8e9c-c5439fb936b7)
+
 
 ## :robot: Link al proyecto
-- [proyecto](https://www.tinkercad.com/things/aOYiibnDjWu)
+- [proyecto]([https://www.tinkercad.com/things/aOYiibnDjWu](https://www.tinkercad.com/things/0sNdIdkgOSq-primera-parte-arduino/editel?sharecode=_PcYw7CHAT_DgpH73fcUKkK6Jb5aN0yTGrQ-i9Zv9Ws))
 ## :tv: Link al video del proceso
-- [video](https://www.youtube.com/watch?v=VyGjE8kx-O0)
+- [video]([https://www.youtube.com/watch?v=VyGjE8kx-O0](https://youtu.be/_Ry7mtURGDE?si=GADtNthtCDugCI--))
 
 ---
 ### Fuentes
-- [Consejos para documentar](https://www.sohamkamani.com/how-to-write-good-documentation/#architecture-documentation).
-
-- [Lenguaje Markdown](https://markdown.es/sintaxis-markdown/#linkauto).
-
-- [Markdown Cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet).
-
-- [Tutorial](https://www.youtube.com/watch?v=oxaH9CFpeEE).
-
-- [Emojis](https://gist.github.com/rxaviers/7360908).
+https://youtu.be/_Ry7mtURGDE?si=GADtNthtCDugCI--
 
 ---
